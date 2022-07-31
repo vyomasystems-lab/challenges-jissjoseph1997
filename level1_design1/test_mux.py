@@ -11,8 +11,8 @@ async def test_mux(dut):
 
     i = 0
     for i in var:
-        dut.var[i] = num
-        num+=1
+        dut.var[i] = i
+        i+=1
     count = 0
     while count < 29:
         print ("Selectline",count)
