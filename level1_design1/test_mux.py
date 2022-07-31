@@ -13,7 +13,7 @@ async def test_mux(dut):
     for i in var:
         dut.i = i = num
         num+=1
-     count = 0
+    count = 0
     while count < 29:
         dut.sel = bin(count)
         assert dut.out == var[i], f"MUX result is incorrect: {dut.out.value} != {count}"
