@@ -12,7 +12,6 @@ async def test_mux(dut):
     num = 0
     for i in var:
         dut.var[i] = num
-        var[i] = num
         num+=1
     count = 0
     while count < 29:
