@@ -13,15 +13,15 @@ async def test_mux(dut):
             inp14, inp15, inp16, inp17, inp18, inp19, inp20,
             inp21, inp22, inp23, inp24, inp25, inp26,
             inp27, inp28, inp29]
-num = 0
-for i in var:
-    dut.i = i = num
-    num+=1
-count = 0
-while count < 29:
-    dut.sel = bin(count)
-    assert dut.out == var[i], f"MUX result is incorrect: {dut.out.value} != {count}"
-    count+=1
+         num = 0
+         for i in var:
+             dut.i = i = num
+             num+=1
+             count = 0
+         while count < 29:
+                 dut.sel = bin(count)
+                 assert dut.out == var[i], f"MUX result is incorrect: {dut.out.value} != {count}"
+                 count+=1
 
     
     
